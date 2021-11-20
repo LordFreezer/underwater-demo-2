@@ -1,4 +1,4 @@
-import React from 'react';
+import react from 'https://cdn.skypack.dev/react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
