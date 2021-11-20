@@ -1,13 +1,377 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+ 
+
 }
 
+#bg{
+  
+  width: 95%;
+  height: 80%;
+  display: block;
+  background-color: yellow;
+}
+
+
+:root {
+  --dark-bg: rgba(3, 3, 3, 0.95);
+  --spacing: 350px;
+
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+main {
+ 
+  color: white;
+  z-index: 99;
+  position: relative;
+  width: 100%;
+  margin: 0px auto;
+  padding: 120px 0px;
+  
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+section {
+  color: aliceblue;
+  border-radius: 25px;
+  grid-column:2 / 12;
+  width: 60%;
+  margin: auto;
+  padding: 1rem;
+  background: var(--dark-bg);
+  font-size: 1.25rem;
+  line-height: 1;
+  margin-bottom: var(--spacing);
+}
+.left {
+  grid-column: 6 / 12;
+}
+* {
+  box-sizing: border-box;
+}
+html, body, .ocean, #bg{
+ 
+  margin: 0;
+  height: 100%;
+  overflow-x:hidden;
+  
+  
+  
+}
+
+
+
+
+#octocat {
+  height: 300px;
+  width: 200px;
+  background: url(https://codinhood.com/static/9a146dac647e7129fa173acc0b0d437f/299c1/octocat.png) left center;
+  animation: animateSprite 15s steps(1) infinite, swim 15s ease-in-out infinite;
+  position: absolute;
+  right: -200px;
+  top: 50%;
+  margin-top: -150px;
+  z-index: 100;
+}
+
+
+@keyframes animateSprite {
+  0% {
+    background-position: -600px; /* Starting position moving left sprite */
+  }
+  20% {
+    background-position: 0px; /* Straight on sprite */
+  }
+  25% {
+    background-position: -200px; /* Moving up sprite */
+  }
+  35% {
+    background-position: -400px; /* Moving right sprite */
+  }
+  40% {
+    background-position: -400px;
+  }
+  50% {
+    background-position: -200px;  /* Moving up sprite */
+  }
+  60% {
+    background-position: -0px; /* Straight on sprite */
+  }
+  67% {
+    background-position: -600px; /* Moving up sprite */
+  }
+
+  100% {
+    background-position: -600px;
+  }
+}
+
+@keyframes swim {
+  0% {
+    transform: translate(0, 0); /* Starting position */
+  }
+  20% {
+    transform: translate(calc(-50vw - 100px), 0); /* Animate to center of screen */
+  }
+  25% {
+    transform: translate(calc(-50vw - 100px), 0); /* Stay at the center for 1 second */
+  }
+  35% {
+    transform: translate(calc(-50vw - 100px), -20vh); /* Animate up for 2 seconds */
+  }
+  50% {
+    transform: translate(-25vw, 15vh); /* Animate bottom right for 3 seconds */
+  }
+  60% {
+    transform: translate(-25vw, -20vh); /* Animate up at right of the screen */
+  }
+  67% {
+    transform: translate(-25vw, -20vh);
+  }
+
+  100% {
+    transform: translate(calc(-100vw - 300px), 0); /* Animate past left past the screen */
+  }
+}
+.box{
+ 
+  background-color: white;
+  z-index: 102;
+  margin-top: 25px;
+
+}
+.ocean {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+  overflow-y: initial;
+ 
+ 
+  background-image: linear-gradient(0deg, #182848, #2980b9);
+  /*display: inline-block;*/
+}
+
+.bubble {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  position: absolute;
+  background-color: rgb(236, 228, 228);
+  bottom: -30px;
+  opacity: 0.2;
+  animation: bubble 15s ease-in-out infinite,
+    sideWays 4s ease-in-out infinite alternate;
+}
+
+@keyframes bubble {
+  0% {
+    transform: translateY(0%);
+    opacity: 0.06;
+  }
+  100% {
+    transform: translateY(-120vh);
+  }
+}
+
+@keyframes sideWays {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 200px;
+  }
+}
+
+.bubble--1 {
+  left: 10%;
+  animation-delay: 0.5s;
+  animation-duration: 16s;
+  opacity: 0.2;
+}
+
+.bubble--2 {
+  width: 15px;
+  height: 15px;
+  left: 40%;
+  animation-delay: 1s;
+  animation-duration: 10s;
+  opacity: 0.1;
+}
+
+.bubble--3 {
+  width: 10px;
+  height: 10px;
+  left: 30%;
+  animation-delay: 5s;
+  animation-duration: 20s;
+  opacity: 0.3;
+}
+
+.bubble--4 {
+  width: 25px;
+  height: 25px;
+  left: 40%;
+  animation-delay: 8s;
+  animation-duration: 17s;
+  opacity: 0.2;
+}
+
+.bubble--5 {
+  width: 30px;
+  height: 30px;
+  left: 60%;
+  animation-delay: 10s;
+  animation-duration: 15s;
+  opacity: 0.1;
+}
+
+.bubble--6 {
+  width: 10px;
+  height: 10px;
+  left: 80%;
+  animation-delay: 3s;
+  animation-duration: 30s;
+  opacity: 0.4;
+}
+
+.bubble--7 {
+  width: 15px;
+  height: 15px;
+  left: 90%;
+  animation-delay: -7s;
+  animation-duration: 25s;
+  opacity: 0.3;
+}
+
+.bubble--9 {
+  width: 20px;
+  height: 20px;
+  left: 50%;
+  bottom: 30px;
+  animation-delay: -5s;
+  animation-duration: 19s;
+  opacity: 0.2;
+}
+
+.bubble--10 {
+  width: 40px;
+  height: 40px;
+  left: 30%;
+  bottom: 30px;
+  animation-delay: -21s;
+  animation-duration: 16s;
+  opacity: 0.3;
+}
+
+.bubble--11 {
+  width: 30px;
+  height: 30px;
+  left: 60%;
+  bottom: 30px;
+  animation-delay: -13.75s;
+  animation-duration: 20s;
+  opacity: 0.3;
+}
+
+.bubble--11 {
+  width: 25px;
+  height: 25px;
+  left: 90%;
+  bottom: 30px;
+  animation-delay: -10.5s;
+  animation-duration: 19s;
+  opacity: 0.3;
+}
+
+
+  /* Float four columns side by side */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding in columns */
+  .row {margin: 0 -5px;
+  
+    
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";   
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the counter cards */
+  /* this adds the "card" effect */
+ .card {
+    box-shadow: 0 4px 8px 0 rgba(248, 248, 248, 0.2); 
+    padding: 16px;
+    height: 100%;
+    text-align: center;
+    background-color: #F5862B !important;
+    /*color: #F5862B;*/
+  }
+  iframe{
+    height: 255px;
+   
+  }
+  /* Responsive columns - one column layout (vertical) on small screens */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+    
+
+  }
+  
+  
+  .btn.btn-primary{
+    background-color: red !important;
+    border: none;
+    position: relative; 
+  
+   
+  }
+
+  
+ 
+
+  .columnB {
+    display: inline-block;
+    
+    position: relative;
+    width: 100px;
+
+  }
+    /* Remove extra left and right margins, due to padding in columns */
+    .rowB {margin: 0 -5px;
+      display: block;
+      position: relative;  
+     bottom: 0%;
+     left: 0%;
+    }
+    
+    /* Clear floats after the columns */
+    .rowB:after {
+      content: "";   
+      display: table;
+      clear: both;
+    }
+  
+ 
