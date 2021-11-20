@@ -1,5 +1,5 @@
 import react from 'https://cdn.skypack.dev/react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'https://unpkg.com/react-dom@16.14.0/umd/react-dom.development.js';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
