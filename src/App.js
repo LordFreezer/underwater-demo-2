@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+//import logo from './public/assets/logo.svg';
+import './style/App.css';
 
 import React from 'react'
 import Wave from 'react-wavify'
@@ -19,4 +19,5 @@ function App() {
   )
 }
 
+//export default hot(module)(App);
 export default App;
