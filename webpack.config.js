@@ -1,24 +1,6 @@
 const path = require('path');
 const webpack = require("webpack");
-//////////////////////////////////////////
-const WebpackDevServer = require('webpack-dev-server');
-/*>>>>>>=============================================<<<<<<*/
-const config = require('./webpack.dev.config.js');
-/*>>>>>>=============================================<<<<<<*/
-const PORT = process.env.PORT || 3000;
 
-new WebpackDevServer(webpack(config), {
-    publicPath: config.output.publicPath,
-    hot: true,
-    historyApiFallback: true
-}).listen(PORT, 'localhost', (err, result) => {
-    if (err) {
-        return console.log(err);
-    }
-
-    console.log(`Listening on port ${PORT}`);
-});
-//////////////////////////////////////////
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
     entry: './src/index.js',
