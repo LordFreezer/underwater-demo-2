@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/underwater-demo-2/static/css/main.7eec2e79.css",
+    "main.css": "/underwater-demo-2/static/css/main.121a4129.css",
     "main.js": "/underwater-demo-2/static/js/main.944c4062.js",
     "index.html": "/underwater-demo-2/index.html",
-    "main.7eec2e79.css.map": "/underwater-demo-2/static/css/main.7eec2e79.css.map",
+    "main.121a4129.css.map": "/underwater-demo-2/static/css/main.121a4129.css.map",
     "main.944c4062.js.map": "/underwater-demo-2/static/js/main.944c4062.js.map"
   },
   "entrypoints": [
-    "static/css/main.7eec2e79.css",
+    "static/css/main.121a4129.css",
     "static/js/main.944c4062.js"
   ]
 }
