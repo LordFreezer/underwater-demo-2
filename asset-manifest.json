@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/underwater-demo-2/static/css/main.121a4129.css",
+    "main.css": "/underwater-demo-2/static/css/main.d4a08521.css",
     "main.js": "/underwater-demo-2/static/js/main.944c4062.js",
+    "static/media/astro.png": "/underwater-demo-2/static/media/astro.521869475b3461f2ab8a.png",
     "index.html": "/underwater-demo-2/index.html",
-    "main.121a4129.css.map": "/underwater-demo-2/static/css/main.121a4129.css.map",
+    "main.d4a08521.css.map": "/underwater-demo-2/static/css/main.d4a08521.css.map",
     "main.944c4062.js.map": "/underwater-demo-2/static/js/main.944c4062.js.map"
   },
   "entrypoints": [
-    "static/css/main.121a4129.css",
+    "static/css/main.d4a08521.css",
     "static/js/main.944c4062.js"
   ]
 }
